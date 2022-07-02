@@ -1,65 +1,35 @@
 import os
 
-while True:
-    print("Welcome to filemanager on py!")
-    ans, filename = map(str, input(os.path.abspath(os.curdir) + ": ").split()) #file name can be a road to folder, and name folder
+def screen_cleener():
+    input()
+    os.system("cls")
 
-    if ("touch") in ans:
-        try:
+print("Welcome to filemanager on py!")
+while True:
+    try:
+        ans, filename = map(str, input(os.path.abspath(os.curdir) + ": ").split())
+
+        if ("touch") in ans:
             with open(str(filename), "w") as f:
                 print("File " + filename + " created")
-            input()
-            os.system("cls")
-        except Exception as e:
-            print("ERROR!")
-            print(e)
-            input()
-            os.system("cls")
-    elif ("rm") in ans:
-        try:
+            screen_cleener()
+        elif ("rm") in ans:
             os.remove(filename)
             print("File was deleted")
-            input()
-            os.system("cls")
-        except Exception as e:
-            print("ERROR!")
-            print(e)
-            input()
-            os.system("cls")
-    elif ("cd") in ans:
-        try:
+            screen_cleener()
+        elif ("cd") in ans:
             os.chdir(filename)
-            input()
-            os.system("cls")
-        except Exception as e:
-            print("ERROR!")
-            print(e)
-            input()
-            os.system("cls")
-    elif ("mkdir") in ans:
-        try:
+            screen_cleener()
+        elif ("mkdir") in ans:
             os.mkdir(filename)
-            input()
-            os.system("cls")
-        except Exception as e:
-            print("ERROR!")
-            print(e)
-            input()
-            os.system("cls")
-    elif ("ls") in ans:
-        try:
+            screen_cleener()
+        elif ("ls") in ans:
             print(os.listdir(os.path.abspath(os.curdir)))
-            input()
-            os.system("cls")
-        except Exception as e:
-            print("ERROR!")
-            print(e)
-            input()
-            os.system("cls")
-    else:
-        print("ERROR")
-        print("You enter wrong command")
-    
-
-
-
+            screen_cleener()
+        else:
+            print("ERROR")
+            print("You enter wrong command")
+    except Exception as e:
+        print("ERROR!")
+        print(e)
+        screen_cleener()
