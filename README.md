@@ -5,10 +5,6 @@
 This is a simple file manager that was written in python. The file manager is a console program where you 
 enter commands (commands are in the section "How to use it?"). It will be useful for those who do not 
 really like the standard commands in Windows.
-- ## history
-The idea of this file manager came to me spontaneously, one evening. 
-It was quite interesting to implement it, though initially it was supposed to be written in C, 
-but something went wrong and I switched to python.
 - ## how it use?
 Hooray, finally we have come to this point.
 ### Commands:
