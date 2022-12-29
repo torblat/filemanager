@@ -6,7 +6,6 @@ This is a simple file manager that was written in python. The file manager is a 
 enter commands (commands are in the section "How to use it?"). It will be useful for those who do not 
 really like the standard commands in Windows.
 - ## how it use?
-Hooray, finally we have come to this point.
 ### Commands:
 - touch: this command is needed to create a file
   Example:
