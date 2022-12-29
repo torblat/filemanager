@@ -1,7 +1,6 @@
 import os
 
 def screen_cleener():
-    input()
     os.system("cls")
 
 print("Welcome to filemanager on py!")
@@ -12,9 +11,11 @@ while True:
         if ("touch") in ans:
             with open(str(filename), "w") as f:
                 print("File " + filename + " created")
+            input("press enter")
         elif ("rm") in ans:
             os.remove(filename)
-            print("File was deleted")  
+            print("File was deleted")
+            input("press enter")
         elif ("cd") in ans:
             os.chdir(filename)
         elif ("mkdir") in ans:
@@ -27,5 +28,5 @@ while True:
     except Exception as e:
         print("ERROR!")
         print(e)
+        input()
     screen_cleener()
-        
